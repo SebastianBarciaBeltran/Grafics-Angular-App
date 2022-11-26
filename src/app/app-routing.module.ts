@@ -4,13 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'grafics',
-    loadChildren: () =>
-      import('./grafics/grafics.module').then((m) => m.GraficsModule),
+    loadChildren: () => import('./grafics/grafics.module').then((m) => m.GraficsModule)
   },
   {
     path: '**',
     redirectTo: 'grafics',
-    pathMatch: 'full',
   },
 ];
 
