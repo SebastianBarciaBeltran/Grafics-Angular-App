@@ -1,12 +1,11 @@
-<li>
-  <a routerLink="grafics/bar">Barra</a>
-</li>
-<li>
-  <a routerLink="grafics/doble-bars">Doble barras</a>
-</li>
-<li>
-  <a routerLink="grafics/donut">Dona</a>
-</li>
-<li>
-  <a routerLink="grafics/donut-http">Dona Http</a>
-</li>
+<ul class="list-group">
+  <li
+    *ngFor="let m of menu"
+    class="list-group-item"
+    id="cursor-poiter"
+    [routerLink]="m.route"
+    routerLinkActive="active"
+  >
+    {{ m.text }}
+  </li>
+</ul>
